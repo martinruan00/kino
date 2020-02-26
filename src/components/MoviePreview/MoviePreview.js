@@ -20,16 +20,20 @@ export class MoviePreview extends React.Component {
                 </div>
                 <div className="col-10">
                     <div>
-                        <Link to={`movie-detail/${m.imdbID}`}>{m.Title}</Link>
+                        <Link to={`/movie-detail/${m.imdbID}`}>{m.Title}</Link>
                     </div>
                     <div>Genre: {m.Genre}</div>
                     <div>Released date: {m.Released}</div>
-                    {m.Ratings.map(r => (
-                        <div className="rating d-inline-block">
-                            <div className="source">{r.Source}</div>
-                            <div className="value">{r.Value}</div>
-                        </div>
-                    ))}
+                    <div className="row">
+                        {m.Ratings.map(r => (
+                            <div className="col-3" key={r.Source}>
+                                <div className="rating d-inline-block">
+                                    <div className="source">{r.Source}</div>
+                                    <div className="value">{r.Value}</div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         );

@@ -1,7 +1,3 @@
-﻿const movieTypes = {
-    movie: "movie",
-    series: "series",
-    episode: "episode"
-}
+﻿const movieTypes = ["movie", "series", "episode"]
 
 export default movieTypes;

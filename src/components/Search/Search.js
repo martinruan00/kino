@@ -1,31 +1,44 @@
 ﻿import React from 'react';
-import TextField from '@material-ui/core/TextField';
-import Autocomplete from '@material-ui/lab/Autocomplete';
 import omdbApiService from '../../services/OmdbApiService.js';
 import movieTypes from '../../services/MovieTypes.js';
 import './Search.css';
-import { Redirect } from 'react-router-dom'
 
 export class Search extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = { resultList: [], movieName: "", toSearchResult: false, toMovieDetail: false };
-
-        this.onSearchTextChanged = this.onSearchTextChanged.bind(this);
-        this.onSearchResultSelected = this.onSearchResultSelected.bind(this);
-        this.onKeyPress = this.onKeyPress.bind(this);
-        this.onSearchTextChanged = this.onSearchTextChanged.bind(this)
-        this.handleChange = this.handleChange.bind(this);
+        let types = {};
+        movieTypes.forEach(t => types[t] = true);
+        this.state = Object.assign(types, { resultList: [], movieName: "", toSearchResult: false, toMovieDetail: false });
     }
 
     render() {
         return (
             <div className="row col-12 justify-content-center">
                 {this.redirectToSearchResult()}
-                <input type="text" onKeyPress={this.onKeyPress} value={this.state.movieName} onChange={this.handleChange} />
+                <form className="form-inline">
+                    <div className="input-group">
+                        {movieTypes.map(t => (
+                            <div className="form-check form-check-inline" key={t}>
+                                <input className="form-check-input" type="checkbox" value={t} checked={this.state[t]} onChange={this.onMovieTypeCheckChanged.bind(this)} id={t} />
+                                <label className="form-check-label" htmlFor={t}>{t}</label>
+                            </div>
+                        ))}
+                    </div>
+                    <div className="input-group">
+                        <input className="form-control" placeholder="Movie name" type="text" onKeyPress={this.onKeyPress.bind(this)} value={this.state.movieName} onChange={this.handleChange.bind(this)} />
+                        <div className="input-group-append">
+                            <button className="btn btn-outline-secondary" type="button" onClick={e => this.setState({ toSearchResult: true })}>Search</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         );
+    }
+
+    onMovieTypeCheckChanged(event) {
+        this.state[event.target.value] = event.target.checked;
+        this.setState(this.state);
     }
 
     handleChange(event) {
@@ -47,26 +60,15 @@ export class Search extends React.Component {
             });
     }
 
-    onSearchResultSelected(event, values) {
-        //if (values) {
-        //    this.setState({ toMovieDetail: true });
-        //}
-    }
-
     onKeyPress(event) {
         if (event.key == "Enter") {
             this.setState({ toSearchResult: true });
         }
     }
 
-    redirectToMovieDetail() {
-        if (this.state.toMovieDetail) {
-            return <Redirect to={{ pathname: "/movie-detail", state: { movie: this.state.movieName } }} />
-        }
-    }
     redirectToSearchResult() {
         if (this.state.toSearchResult) {
-            return <Redirect to={{ pathname: "/search-result", state: { movie: this.state.movieName } }} />
+            this.props.history.push(`/search-result/${this.state.movieName}&${movieTypes.filter(t => this.state[t]).join(',')}`);
         }
     }
 }
