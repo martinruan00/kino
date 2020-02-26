@@ -1,0 +1,1 @@
+export const AppConfig = { "server": "http://omdbapi.com", "apikey": "aa25ad59" };

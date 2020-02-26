@@ -1,0 +1,21 @@
+﻿.movie {
+    cursor: pointer;
+}
+
+    .movie:hover {
+        background-color: gainsboro;
+    }
+
+.rating {
+    border: solid 1px black;
+    text-align: center;
+    width: 20%;
+}
+
+    .rating .source {
+        background-color: yellow;
+        border-bottom: solid 1px black
+    }
+
+    .rating .value {
+    }
