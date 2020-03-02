@@ -1,23 +1,36 @@
 {
   "files": {
-    "main.css": "/kino/static/css/main.cc462f3b.chunk.css",
-    "main.js": "/kino/static/js/main.b6df129a.chunk.js",
-    "main.js.map": "/kino/static/js/main.b6df129a.chunk.js.map",
-    "runtime-main.js": "/kino/static/js/runtime-main.06c170c5.js",
-    "runtime-main.js.map": "/kino/static/js/runtime-main.06c170c5.js.map",
-    "static/js/2.24593d58.chunk.js": "/kino/static/js/2.24593d58.chunk.js",
-    "static/js/2.24593d58.chunk.js.map": "/kino/static/js/2.24593d58.chunk.js.map",
+    "main.css": "/kino/static/css/main.c8ea3f87.chunk.css",
+    "main.js": "/kino/static/js/main.1fd11557.chunk.js",
+    "main.js.map": "/kino/static/js/main.1fd11557.chunk.js.map",
+    "runtime-main.js": "/kino/static/js/runtime-main.e8e8add5.js",
+    "runtime-main.js.map": "/kino/static/js/runtime-main.e8e8add5.js.map",
+    "static/js/2.e4640b9b.chunk.js": "/kino/static/js/2.e4640b9b.chunk.js",
+    "static/js/2.e4640b9b.chunk.js.map": "/kino/static/js/2.e4640b9b.chunk.js.map",
+    "static/css/3.e0387b33.chunk.css": "/kino/static/css/3.e0387b33.chunk.css",
+    "static/js/3.705e8fd6.chunk.js": "/kino/static/js/3.705e8fd6.chunk.js",
+    "static/js/3.705e8fd6.chunk.js.map": "/kino/static/js/3.705e8fd6.chunk.js.map",
+    "static/css/4.944cee0c.chunk.css": "/kino/static/css/4.944cee0c.chunk.css",
+    "static/js/4.af67cbfa.chunk.js": "/kino/static/js/4.af67cbfa.chunk.js",
+    "static/js/4.af67cbfa.chunk.js.map": "/kino/static/js/4.af67cbfa.chunk.js.map",
+    "static/css/5.682b7817.chunk.css": "/kino/static/css/5.682b7817.chunk.css",
+    "static/js/5.3d8491b9.chunk.js": "/kino/static/js/5.3d8491b9.chunk.js",
+    "static/js/5.3d8491b9.chunk.js.map": "/kino/static/js/5.3d8491b9.chunk.js.map",
+    "static/js/6.98af3fe9.chunk.js": "/kino/static/js/6.98af3fe9.chunk.js",
+    "static/js/6.98af3fe9.chunk.js.map": "/kino/static/js/6.98af3fe9.chunk.js.map",
     "index.html": "/kino/index.html",
-    "precache-manifest.74f6397b60d2554bdf84c845bc48d0e1.js": "/kino/precache-manifest.74f6397b60d2554bdf84c845bc48d0e1.js",
+    "precache-manifest.230f3552b5d6f937b849395ac1ac8234.js": "/kino/precache-manifest.230f3552b5d6f937b849395ac1ac8234.js",
     "service-worker.js": "/kino/service-worker.js",
-    "static/css/main.cc462f3b.chunk.css.map": "/kino/static/css/main.cc462f3b.chunk.css.map",
-    "static/js/2.24593d58.chunk.js.LICENSE.txt": "/kino/static/js/2.24593d58.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/kino/static/media/logo.5d5d9eef.svg"
+    "static/css/3.e0387b33.chunk.css.map": "/kino/static/css/3.e0387b33.chunk.css.map",
+    "static/css/4.944cee0c.chunk.css.map": "/kino/static/css/4.944cee0c.chunk.css.map",
+    "static/css/5.682b7817.chunk.css.map": "/kino/static/css/5.682b7817.chunk.css.map",
+    "static/css/main.c8ea3f87.chunk.css.map": "/kino/static/css/main.c8ea3f87.chunk.css.map",
+    "static/js/2.e4640b9b.chunk.js.LICENSE.txt": "/kino/static/js/2.e4640b9b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.06c170c5.js",
-    "static/js/2.24593d58.chunk.js",
-    "static/css/main.cc462f3b.chunk.css",
-    "static/js/main.b6df129a.chunk.js"
+    "static/js/runtime-main.e8e8add5.js",
+    "static/js/2.e4640b9b.chunk.js",
+    "static/css/main.c8ea3f87.chunk.css",
+    "static/js/main.1fd11557.chunk.js"
   ]
 }
